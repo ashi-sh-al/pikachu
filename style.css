@@ -1,0 +1,281 @@
+/* =========================
+   Fonts
+========================= */
+
+@font-face {
+  font-family: "Comforta";
+  src: url("./fonts/Comfortaa-Regular.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cossette";
+  src: url("./fonts/Cossette-Regular.ttf");
+  font-display: swap;
+}
+
+/* =========================
+   Reset
+========================= */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   Base
+========================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+
+  background-color: #fbe8b3;
+
+  overflow-x: hidden;
+}
+
+/* =========================
+   Main Layout
+========================= */
+
+.main {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+/* =========================
+   Pikachu Image
+========================= */
+
+#pikachu-img {
+  position: absolute;
+
+  top: 50%;
+  left: 60%;
+
+  transform: translate(-50%, -50%);
+
+  height: min(90vh, 850px);
+  width: auto;
+
+  object-fit: contain;
+
+  z-index: 5;
+
+  pointer-events: none;
+}
+
+/* =========================
+   Left Section
+========================= */
+
+.main-left {
+  width: min(55%, 900px);
+  min-height: 100vh;
+
+  padding:
+    2rem
+    2rem
+    0;
+
+  background-color: #fcc60c;
+
+  overflow: hidden;
+}
+
+/* =========================
+   Pokemon Logo
+========================= */
+
+#pokemon-logo {
+  height: clamp(70px, 12vh, 120px);
+  width: auto;
+
+  object-fit: contain;
+}
+
+/* =========================
+   Text Box
+========================= */
+
+.main-left-text-box {
+  margin-top: 8vh;
+  margin-left: 5vw;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.2rem;
+}
+
+/* =========================
+   Subtitle
+========================= */
+
+.main-left h4 {
+  font-family: "Comforta", sans-serif;
+
+  font-size: 1rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.4rem;
+}
+
+/* =========================
+   Main Heading
+========================= */
+
+.main-left h1 {
+  font-family: "Cossette", serif;
+
+  font-size: clamp(4rem, 10vw, 8rem);
+
+  line-height: 0.95;
+
+  text-transform: capitalize;
+}
+
+/* =========================
+   Description
+========================= */
+
+.main-left p {
+  width: min(520px, 60%);
+
+  font-family: "Comforta", sans-serif;
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+}
+
+/* =========================
+   Divider
+========================= */
+
+.hr-line {
+  display: flex;
+  align-items: center;
+
+  gap: 1rem;
+
+  margin-top: 1rem;
+}
+
+.hr-line hr {
+  width: clamp(40px, 5vw, 80px);
+
+  border: 1px solid #000;
+}
+
+.main-left h5 {
+  font-family: "Comforta", sans-serif;
+
+  font-size: 0.9rem;
+}
+
+/* =========================
+   Pokeball
+========================= */
+
+.pokemon-ball-container {
+  position: relative;
+
+  width: 100%;
+  height: 35vh;
+
+  overflow: hidden;
+}
+
+#pokemon-ball {
+  position: absolute;
+
+  left: 5vw;
+  bottom: -20%;
+
+  height: min(40vh, 380px);
+  width: auto;
+
+  opacity: 0.25;
+
+  object-fit: contain;
+}
+
+/* =========================
+   Right Section
+========================= */
+
+.main-right {
+  width: 10%;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* =========================
+   Menu Icon
+========================= */
+
+.main-right img {
+  margin-top: 2rem;
+  margin-right: 2rem;
+
+  height: 36px;
+  width: 36px;
+
+  object-fit: contain;
+
+  cursor: pointer;
+}
+
+/* =========================
+   Dots Navigation
+========================= */
+
+.dots-container {
+  position: fixed;
+
+  top: 50%;
+  right: 2rem;
+
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+
+  background-color: #fcc60c;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.dot:hover {
+  transform: scale(1.2);
+}
+
+.first-dot {
+  background-color: #000;
+}
